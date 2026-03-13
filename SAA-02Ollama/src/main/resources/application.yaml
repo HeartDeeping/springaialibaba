@@ -1,0 +1,18 @@
+server:
+  port: 2011
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+spring:
+  application:
+    name: SAA-02Ollama
+  ai:
+    dashscope:
+      api-key: sk-d206cac253a242aab48e6848ce7b9bd5
+    ollama:
+      base-url: http://localhost:11434 #调用本地ollama
+      chat:
+        model: qwen3.5:0.8b
+

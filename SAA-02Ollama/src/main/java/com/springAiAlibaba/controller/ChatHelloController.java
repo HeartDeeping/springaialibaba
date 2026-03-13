@@ -1,6 +1,7 @@
 package com.springAiAlibaba.controller;
 
 import org.springframework.ai.chat.model.ChatModel;
+import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,15 +12,15 @@ import reactor.core.publisher.Flux;
 @RestController
 public class ChatHelloController {
     @Autowired
-    @Qualifier("dashScopeChatModel")
+    @Qualifier("ollamaChatModel")
     private ChatModel chatModel;
 
-    @GetMapping("/qwen/doChat")
+    @GetMapping("/ollama/doChat")
     public String doChat(@RequestParam(value = "question",defaultValue = "你是谁") String question) {
         return chatModel.call(question);
     }
 
-    @GetMapping("/qwen/streamChat")
+    @GetMapping("/ollama/streamChat")
     public Flux<String> streamChat(@RequestParam(value = "question",defaultValue = "你是谁") String question) {
         return chatModel.stream(question);
     }
