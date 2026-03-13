@@ -16,6 +16,7 @@
     <modules>
         <module>SAA-01HelloWord</module>
         <module>SAA-02Ollama</module>
+        <module>SAA-03ChatClient</module>
     </modules>
 
     <packaging>pom</packaging>

@@ -1,5 +1,5 @@
 server:
-  port: 2011
+  port: 2012
   servlet:
     encoding:
       enabled: true

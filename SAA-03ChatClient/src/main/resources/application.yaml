@@ -1,5 +1,5 @@
 server:
-  port: 2011
+  port: 2013
   servlet:
     encoding:
       enabled: true
@@ -7,12 +7,12 @@ server:
       charset: UTF-8
 spring:
   application:
-    name: SAA-01HelloWorld
+    name: SAA-03ChatClient
   ai:
     dashscope:
       api-key: sk-d206cac253a242aab48e6848ce7b9bd5
-#      agent:
-#        base-url: https://dashscope.aliyuncs.com/api/v1
-#      chat:
-#        options:
-#          model: qwen-plus
+      agent:
+        base-url: https://dashscope.aliyuncs.com/api/v1
+      chat:
+        options:
+          model: qwen-plus
